@@ -12,7 +12,6 @@ db.books.find()
 ```
 
 In a real application you do not use the shell. You write Node.js code that sends the same operations to MongoDB through a driver. The commands are identical - what changes is the wrapper around them.
-jk
 
 This lab walks you through that transition using a books collection.
 
