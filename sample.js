@@ -52,7 +52,7 @@ async function main() {
   // ----------------------------------------------------------
   // Insert one book that has a tags field containing
   // an array of at least 3 strings.
-  await books.insertOne({ title: "Teamwork", tags: ["worker1", "worker2", "worker3"] })
+  await books.insertOne({title: "Teamwork", tags: ["worker1", "worker2", "worker3"]})
 
   // ----------------------------------------------------------
   // TODO 3 - insertMany
@@ -63,7 +63,7 @@ async function main() {
     {title: "worker", publisher: {name: "Mike", country: "France"}},
     {title: "player", publisher: {name: "John", country: "Afghanistan"}},
     {title: "white", tags: ["interested", "comical"]},
-    { title: "gamer", publisher: { name: "Smith", country: "Ghana" }, tags: ["action", "multiplayer"] },
+    {title: "gamer", publisher: {name: "Smith", country: "Ghana"}, tags: ["action", "multiplayer"]},
     {title: "gambler", publisher: {name: "Elton", country: "Colombia"}}
   ])
 
