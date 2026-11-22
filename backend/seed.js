@@ -14,21 +14,34 @@ async function main() {
 
   // TODO 1: insert a user with an embedded address object.
   // The address must have at least a city and a country field.
+  await users.insertOne({title: "Engineer", address: {city: "Paris", country: "France"}})
 
   // TODO 2: insert a user with a skills array containing at least 3 items.
+  await users.insertOne({title: "Developer", skills: ["JavaScript", "Python", "C"]})
 
   // TODO 3: use insertMany to insert at least 5 users in a single call.
   // Requirements:
   //   - At least 2 users must have address.country set to "France"
   //   - At least 2 users must have a skills array with at least 1 item
+  await users.insertMany([
+    {title: "QA engineer", skills: ["TypeScript"]},
+    {title: "Assistant", address: {country: "France"}, skills: ["JavaScript"]},
+    {title: "Newbie", address: {country: "France", city: "Fresnes"}},
+    {title: "CEO", skills: ["JavaScript", "Python", "C++"]},
+    {title: "Creator", skills: ["JavaScript"]}
+  ])
 
   // TODO 4: retrieve all documents and log each user's name.
+  await users.find()
 
   // TODO 5: use dot notation to find the user whose address.city is "Paris" and log the result.
+  await users.findOne({"address.city": "Paris"})
 
   // TODO 6: find all users whose address.country is "France" and log their names.
+  await users.find({"address.country": "France"})
 
   // TODO 7: find all users who have a skills field and log their names.
+  await users.find({ skills: { $exists: true } }).toArray()
 
   await client.close();
 }
