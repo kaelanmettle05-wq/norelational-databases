@@ -58,3 +58,6 @@ Then open `frontend/index.html` in your browser. You will see three sections:
 - **Users with Skills** - `find({ skills: { $exists: true } })`
 
 `server.js` is provided for you - you do not need to modify it. Notice that each filtered view requires its own hardcoded route. That limitation is exactly what a REST API solves - you will build one in sessions 7 and 8.
+
+...
+...
