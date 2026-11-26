@@ -84,3 +84,5 @@ Then open `frontend/index.html` in your browser.
 | Successful delete | `204` |
 | Document not found | `404` |
 | Server error | `500` |
+
+..,
